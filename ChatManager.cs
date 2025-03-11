@@ -6,6 +6,8 @@ using System;
 
 public class ChatManager : MonoBehaviour
 {
+
+    // Remove the serialized field for the chat input field in production
     [SerializeField]
     private bool isChatActive = false;
 
@@ -21,7 +23,8 @@ public class ChatManager : MonoBehaviour
 
     private void Start()
     {
-        chatText.text = "start";
+        // Empty the chat text
+        chatText.text = "";
     }
 
     private void OnEnable()
